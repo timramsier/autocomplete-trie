@@ -1,0 +1,37 @@
+Arguments: 
+  /Users/ramsiert/.nvm/versions/node/v8.9.4/bin/node /Users/ramsiert/.nvm/versions/node/v8.9.4/bin/yarn install prettier
+
+PATH: 
+  /Users/ramsiert/.rvm/gems/ruby-2.4.2/bin:/Users/ramsiert/.rvm/gems/ruby-2.4.2@global/bin:/Users/ramsiert/.rvm/rubies/ruby-2.4.2/bin:/Users/ramsiert/.nvm/versions/node/v8.9.4/bin:/Users/ramsiert/.pyenv/plugins/pyenv-virtualenv/shims:/Users/ramsiert/.pyenv/shims:/Users/ramsiert/.local/bin:/Users/ramsiert/.pyenv/bin:/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:/Users/ramsiert/Library/Python/3.6/bin:/usr/local/opt/libxml2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Wireshark.app/Contents/MacOS:/Users/ramsiert/.rvm/bin:/Users/ramsiert/.rvm/bin
+
+Yarn version: 
+  1.8.0
+
+Node version: 
+  8.9.4
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/ramsiert/Projects/node/autocomplete-trie/package.json: Unexpected token } in JSON at position 97
+      at JSON.parse (<anonymous>)
+      at /Users/ramsiert/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:1130:59
+      at Generator.next (<anonymous>)
+      at step (/Users/ramsiert/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:98:30)
+      at /Users/ramsiert/.nvm/versions/node/v8.9.4/lib/node_modules/yarn/lib/cli.js:109:13
+      at <anonymous>
+
+npm manifest: 
+  {
+    "name": "autocomplete-trie",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

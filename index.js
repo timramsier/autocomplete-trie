@@ -44,6 +44,10 @@ class AutoComplete {
     this.addCharactersToNode(this.head, chars);
   }
 
+  addWords(wordArray) {
+    wordArray.forEach(word => this.addWord(word));
+  }
+
   getWord(node, str = "") {
     if (!node.parent) return str;
     return this.getWord(node.parent, `${node.char}${str}`);

@@ -1,9 +1,11 @@
 /**
- * A Node in the trie containing meta information and the character value.  If terminate is true
- * it indicates that a complete word can be created from the Node back to the top of the tree.
+ * A Node in the trie containing meta information and the character value.
+ * If terminate is true it indicates that a complete word can be created
+ * from the Node back to the top of the tree.
  * @param {string} char - a single character
  * @param {array} children - an array of child Nodes
- * @param {boolean} terminate - a boolean that determines if a word can be create from here to the root Node
+ * @param {boolean} terminate - a boolean that determines if a word can be
+ * create from here to the root Node
  * @param {object} parent - the parent Node that this Node is a child of
  */
 class Node {
@@ -16,8 +18,8 @@ class Node {
 }
 
 /**
- * An auto complete trie that when loaded with words can determine possible words that will complete
- * a supplied string.
+ * An auto complete trie that when loaded with words can determine possible
+ * words that will complete a supplied string.
  */
 class AutoComplete {
   constructor() {
@@ -53,7 +55,6 @@ class AutoComplete {
     let charNode = [...node.children.filter(child => child.char === char)][0];
     if (!charNode) {
       charNode = new Node({ char, terminate: chars.length < 1, parent: node });
-      node.score += 1;
       node.children.push(charNode);
     } else if (!charNode.terminate) {
       charNode.terminate = chars.length < 1;
@@ -123,7 +124,7 @@ class AutoComplete {
    */
   findWords(str) {
     const chars = [...str];
-    const node = this.findNode(this.head, chars);
+    const node = this.findNode(chars);
     if (node) return this.findLeafs(node).map(leaf => this.getWord(leaf));
     return [];
   }
